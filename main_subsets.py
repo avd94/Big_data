@@ -99,7 +99,7 @@ def print_flags():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--learning_rate', type=float, default=0.01,
+    parser.add_argument('--learning_rate', type=float, default=0.001,
                         help='Learning rate')
     parser.add_argument('--epochs', type=int, default=1,
                         help='Number of epochs to run trainer.')
