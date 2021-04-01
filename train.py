@@ -56,7 +56,7 @@ def custom_train(net, trainloader, valloader, testloader, dir, model_num, epochs
         scheduler.step(val_val)
         test_acc = valid(net, testloader, device=device)
         test_scores.append(test_acc['accuracy'])
-        epoch_time = experiment_timer - time.time()
+        epoch_time = time.time() - experiment_timer
         time_list.append(epoch_time)
 
     results = {"train_losses": train_losses,

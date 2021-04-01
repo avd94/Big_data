@@ -8,7 +8,7 @@ import numpy as np
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader, Subset
 from dataset import CIFAR10_loader
-from architecture_64 import ConvNet3
+from architecture_new import ConvNet3
 from train import custom_train, valid, valid_class
 from utils import save_dict, _get_model_file
 import os
@@ -95,11 +95,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--learning_rate', type=float, default=0.001,
                         help='Learning rate')
-    parser.add_argument('--epochs', type=int, default=1,
+    parser.add_argument('--epochs', type=int, default=30,
                         help='Number of epochs to run trainer.')
     parser.add_argument('--batch_size', type=int, default=64,
                         help='Batch size to run trainer.')
-    parser.add_argument('--resize_val', type=int, default=64,
+    parser.add_argument('--resize_val', type=int, default=32,
                         help='Resize value for images')
     parser.add_argument('--overwrite', type=bool, default=True,
                         help='If overwrite already trained model')
